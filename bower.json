@@ -1,12 +1,13 @@
 {
-    "name": "angular-bootstrap-contextmenu",
+    "name": "vf-angular-bootstrap-contextmenu",
     "version": "0.9.7",
-    "main": [ 
+    "main": [
         "contextMenu.js"
     ],
-    "homepage": "https://github.com/Templarian/ui.bootstrap.contextMenu",
+    "homepage": "https://github.com/VersifitTechnologies/ui.bootstrap.contextMenu.git",
     "authors": [
-        { "name": "Austin Andrews", "homepage": "http://templarian.com" }
+        { "name": "Austin Andrews", "homepage": "http://templarian.com" },
+        { "name": "Ted Ekdahl"}
     ],
     "license": ["MIT"],
     "ignore": [
