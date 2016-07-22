@@ -46,11 +46,11 @@ angular.module('ui.bootstrap.contextMenu', [])
         var $promise = $q.when(text);
         $promises.push($promise);
         $promise.then(function (text) {
+            $a.append($('<div class="pull-left">' + text + '</div>'));
             if (nestedMenu) {
                 $a.css("cursor", "default");
-                $a.append($('<strong style="font-family:monospace;font-weight:bold;float:right;">&gt;</strong>'));
+                $a.append($('<div class="pull-right"><strong>&gt;</strong></div>'));
             }
-            $a.append(text);
         });
 
         return $a;
@@ -300,7 +300,7 @@ angular.module('ui.bootstrap.contextMenu', [])
         element.on(openMenuEvent, function (event) {
             event.stopPropagation();
             event.preventDefault();
-            
+
             // Don't show context menu if on touch device and element is draggable
             if(isTouchDevice() && element.attr('draggable') === 'true') {
               return false;
