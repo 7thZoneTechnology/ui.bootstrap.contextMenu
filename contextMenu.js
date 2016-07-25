@@ -30,7 +30,7 @@ angular.module('ui.bootstrap.contextMenu', [])
     var processTextItem = function ($scope, item, text, event, model, $promises, nestedMenu, $) {
         "use strict";
 
-        var $a = $('<a>');
+        var $a = $('<a class="menuItem">');
         $a.css("padding-right", "8px");
         $a.attr({ tabindex: '-1', href: '#' });
 
@@ -46,10 +46,10 @@ angular.module('ui.bootstrap.contextMenu', [])
         var $promise = $q.when(text);
         $promises.push($promise);
         $promise.then(function (text) {
-            $a.append($('<div class="pull-left">' + text + '</div>'));
+            $a.append($('<div class="pull-left itemName">' + text + '</div>'));
             if (nestedMenu) {
                 $a.css("cursor", "default");
-                $a.append($('<div class="pull-right"><strong>&gt;</strong></div>'));
+                $a.append($('<div class="pull-right menuArrow"><strong>&gt;</strong></div>'));
             }
         });
 
